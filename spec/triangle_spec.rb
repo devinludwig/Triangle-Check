@@ -13,5 +13,15 @@ describe('Triangle') do
       test_triangle = Triangle.new(33,33,23)
       expect(test_triangle.type?()).to(eq('isosceles'))
     end
+
+    it("returns 'not a triangle' when it is not a triangle") do
+      test_triangle = Triangle.new(1,2,5)
+      expect(test_triangle.type?()).to(eq('not a triangle'))
+    end
+
+    it("returns 'scalene' when no sides are equal") do
+      test_triangle = Triangle.new(3,4,5)
+      expect(test_triangle.type?()).to(eq('scalene'))
+    end
   end
 end
