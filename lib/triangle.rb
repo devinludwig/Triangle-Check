@@ -8,6 +8,8 @@ class Triangle
   define_method(:type?) do
     if @side1 == @side2 && @side1 == @side3
       'equilateral'
-    end  
+    elsif @side1 == @side2 or @side1 == @side3 or @side2 == @side3
+      'isosceles'
+    end
   end
 end
